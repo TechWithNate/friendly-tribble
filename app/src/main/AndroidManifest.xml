@@ -13,6 +13,27 @@
         android:theme="@style/Theme.Gamification"
         tools:targetApi="31">
         <activity
+            android:name=".quizzes.gtw.GuessTheWord"
+            android:exported="false" />
+        <activity
+            android:name=".quizzes.geoquiz.Capitals"
+            android:exported="false" />
+        <activity
+            android:name=".quizzes.geoquiz.FlagQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".quizzes.geoquiz.EmbulumQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".quizzes.geoquiz.GeoQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
