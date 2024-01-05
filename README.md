@@ -8,8 +8,9 @@
 2. There are multiple games a user could choose from to play
 
 # Games
+
 ## Geo Quiz
-   Geo quiz is much more about geographical knowledges
+	Geo quiz is much more about geographical knowledges
 	### Embulum Quiz
 	    * User selects from list of continents to guess their embulum
 	    * Each Continent displays an emblum of a country and displays it for 15 
