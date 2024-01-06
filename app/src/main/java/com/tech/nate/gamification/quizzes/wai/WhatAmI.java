@@ -1,4 +1,4 @@
-package com.tech.nate.gamification.kys;
+package com.tech.nate.gamification.quizzes.wai;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.tech.nate.gamification.R;
 
-public class KnowYourScience extends AppCompatActivity {
+public class WhatAmI extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_know_your_science);
+        setContentView(R.layout.activity_what_am_i);
     }
 }
