@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Gamification"
         tools:targetApi="31">
         <activity
+            android:name=".antonyms.Antonyms"
+            android:exported="false" />
+        <activity
+            android:name=".quizzes.synonyms.Synonyms"
+            android:exported="false" />
+        <activity
             android:name=".quizzes.brainteaser.BrainTeaser"
             android:exported="false" />
         <activity
