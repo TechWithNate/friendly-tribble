@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Gamification"
         tools:targetApi="31" >
         <activity
+            android:name=".jhs.ss.SocialStudies"
+            android:exported="false" />
+        <activity
+            android:name=".jhs.science.Science"
+            android:exported="false" />
+        <activity
+            android:name=".jhs.english.English"
+            android:exported="false" />
+        <activity
+            android:name=".jhs.maths.Maths"
+            android:exported="false" />
+        <activity
             android:name=".quizzes.wai.WhatAmI"
             android:exported="false" />
         <activity
