@@ -12,8 +12,8 @@
 		 ## Geo Quiz
 			Geo quiz is much more about geographical knowledges
 ### Embulum Quiz
-			    * User selects from list of continents to guess their embulum
-			    * Each Continent displays an emblum of a country and displays it for 15 
+   User selects from list of continents to guess their embulum
+			l Each Continent displays an emblum of a country and displays it for 15 
 			    seconds. With four options to choose the matching country.
 ### Flags Quiz
 			   * User select from list of continents to start.
