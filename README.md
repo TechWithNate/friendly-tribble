@@ -16,9 +16,9 @@ Student should be able to enter a name and an avatar
 A leaderboard is very necessary to display the names of students and their points that they earn
 
 # Games
-	## Primary
-		 ## Geo Quiz
-			Geo quiz is much more about geographical knowledges
+## Primary
+## Geo Quiz
+Geo quiz is much more about geographical knowledges
 ### Embulum Quiz
    User selects from list of continents to guess their embulum
 			l Each Continent displays an emblum of a country and displays it for 15 
