@@ -12,6 +12,9 @@ Student should be able to enter a name and an avatar
 1. This is the main screen of the application that displays games
 2. There are multiple games a user could choose from to play
 
+#Leaderboard
+A leaderboard is very necessary to display the names of students and their points that they earn
+
 # Games
 	## Primary
 		 ## Geo Quiz
