@@ -1,8 +1,12 @@
 # Gamification 
-This is a mobile application for gaming for both primary and JHS
+This is a mobile application for gaming for both primary and JHS. 
+
 # Splash Screen
 1. First Screen of the application
 2. Displays in 2.5 seconds before the main page launches
+
+# Create Account
+Student should be able to enter a name and an avatar 
 
 # Home Screen
 1. This is the main screen of the application that displays games
