@@ -1,4 +1,5 @@
-# Gamification
+# Gamification 
+This is a mobile application for gaming for both primary and JHS
 # Splash Screen
 1. First Screen of the application
 2. Displays in 2.5 seconds before the main page launches
