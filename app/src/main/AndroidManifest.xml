@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Gamification"
         tools:targetApi="31">
         <activity
+            android:name=".Leaderboard"
+            android:exported="false" />
+        <activity
             android:name=".PrimaryHome"
             android:exported="false" />
         <activity
