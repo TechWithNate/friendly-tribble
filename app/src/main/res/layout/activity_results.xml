@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".activities.Results">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/rematch_btn"
+        android:layout_marginBottom="5dp"
+        android:background="@color/grey_dark" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rematch_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textSize="20sp"
+        android:backgroundTint="@color/light_blue"
+        android:text="Rematch"
+        app:cornerRadius="5dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/xpLayout"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/player_details"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/main_dark"
+        app:strokeColor="@color/light_blue"
+        app:strokeWidth="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/winningXP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="5 XP"
+                android:textColor="@color/light_blue" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scores"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="#3A9E28"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/win_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You Won"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+        <!--        Start of Player Details-->
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:id="@+id/player_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/player_card"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="90dp">
+
+                <ImageView
+                    android:id="@+id/player_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_launcher_background"
+                    android:scaleType="centerCrop" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/player_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/player_card"
+                android:layout_centerHorizontal="true"
+                android:text="Level 0"
+                android:textColor="@color/white_grey" />
+
+            <TextView
+                android:id="@+id/player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/player_level"
+                android:layout_centerHorizontal="true"
+                android:text="Starr"
+                android:textColor="@color/white_grey" />
+
+        </RelativeLayout>
+        <!--        End of Player Details-->
+
+
+        <TextView
+            android:id="@+id/scores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bubblegum_sans"
+            android:text="5 : 0"
+            android:layout_above="@+id/player_details"
+            android:layout_marginBottom="30dp"
+            android:textColor="#25EF00"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+
+
+
+
+
+</RelativeLayout>
