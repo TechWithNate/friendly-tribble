@@ -24,7 +24,7 @@
         android:fontFamily="@font/bubblegum_sans"
         android:textSize="20sp"
         android:backgroundTint="@color/light_blue"
-        android:text="Rematch"
+        android:text="Replay"
         app:cornerRadius="5dp" />
 
 

@@ -2,6 +2,8 @@ package com.nate.royalquest.activities;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,11 +12,29 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.button.MaterialButton;
 import com.nate.royalquest.R;
 
 public class Results extends AppCompatActivity {
 
     private ImageView playerImage;
+    private RelativeLayout relativeLayout;
+    private TextView winStatus;
+    private TextView winText;
+    private ImageView opponentImage;
+    private TextView playerLevel;
+    private TextView playerName;
+    private TextView opponentName;
+    private TextView scores;
+
+    private TextView opponentLevel;
+    private TextView winningXP;
+    private MaterialButton rematchBtn;
+
+    private boolean status;
+    private int pScore;
+    private int oScore;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
