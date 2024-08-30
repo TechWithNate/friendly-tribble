@@ -28,6 +28,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.nate.royalquest.R;
+import com.nate.royalquest.activities.CreateProfile;
+import com.nate.royalquest.activities.Login;
 
 import java.util.Objects;
 
@@ -37,6 +39,7 @@ public class ProfileFragment extends Fragment {
     private ImageView profileImage;
     private TextView tvUsername;
     private TextView tvScore;
+    private TextView tvLvl;
     private EditText etFirstname;
     private EditText etLastname;
     private AutoCompleteTextView genderAutoComplete;
@@ -70,6 +73,12 @@ public class ProfileFragment extends Fragment {
             gender = (String) parent.getItemAtPosition(position);
         });
 
+        logoutBtn.setOnClickListener(v -> {
+            firebaseAuth.signOut();
+            startActivity(new Intent(getContext(), Login.class));
+            getActivity().finish();
+        });
+
         return view;
     }
 
@@ -77,11 +86,13 @@ public class ProfileFragment extends Fragment {
         profileImage = view.findViewById(R.id.profile_img);
         tvUsername = view.findViewById(R.id.tv_username);
         tvScore = view.findViewById(R.id.tv_scores);
+        tvLvl = view.findViewById(R.id.tv_lvl);
         etFirstname = view.findViewById(R.id.firstname);
         etLastname = view.findViewById(R.id.lastname);
         levelAutoComplete = view.findViewById(R.id.level);
         genderAutoComplete = view.findViewById(R.id.gender);
         editProfileBtn = view.findViewById(R.id.edit_profile_btn);
+        logoutBtn = view.findViewById(R.id.logout_btn);
 
         // In your onCreate or a similar method
         firebaseAuth = FirebaseAuth.getInstance();
@@ -107,10 +118,12 @@ public class ProfileFragment extends Fragment {
                         String gender = snapshot.child("gender").getValue(String.class);
                         String level = snapshot.child("level").getValue(String.class);
                         String imageUri = snapshot.child("profileImg").getValue(String.class);
+                        int playerLevel = snapshot.child("playerLevel").getValue(Integer.class);
 
                         // Populate UI components
                         tvUsername.setText(firstname + " " + lastname);
-                        tvScore.setText(String.valueOf(score));
+                        tvScore.setText(score +" Royal Points");
+                        tvLvl.setText("Lvl "+ playerLevel);
                         genderAutoComplete.setText(gender);
                         etFirstname.setText(firstname);
                         etLastname.setText(lastname);
@@ -120,6 +133,8 @@ public class ProfileFragment extends Fragment {
                         }
                     } else {
                         Toast.makeText(getContext(), "Profile does not exist", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getContext(), CreateProfile.class));
+                        getActivity().finish();
                     }
                 }
 

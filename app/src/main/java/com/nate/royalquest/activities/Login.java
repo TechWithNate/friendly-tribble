@@ -48,6 +48,10 @@ public class Login extends AppCompatActivity {
 
         login.setOnClickListener(v -> checkFields());
 
+        signUp.setOnClickListener(v -> {
+            startActivity(new Intent(this, CreateAccount.class));
+            finish();
+        });
 
     }
 

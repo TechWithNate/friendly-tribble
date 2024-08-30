@@ -85,6 +85,17 @@
             android:layout_below="@+id/tv_username"
             android:text="Scores"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_lvl"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_scores"
+            android:text="Lvl"/>
+
 
         <TextView
             android:id="@+id/tv_firstname"
@@ -94,7 +105,7 @@
             android:layout_marginStart="20dp"
             android:textSize="15sp"
             android:layout_marginTop="30dp"
-            android:layout_below="@+id/tv_scores"/>
+            android:layout_below="@+id/tv_lvl"/>
 
         <EditText
             android:layout_width="match_parent"

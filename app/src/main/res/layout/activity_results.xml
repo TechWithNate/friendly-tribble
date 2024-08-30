@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="@color/white"
     tools:context=".activities.Results">
 
     <RelativeLayout
@@ -23,15 +23,16 @@
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/bubblegum_sans"
         android:textSize="20sp"
+        android:textColor="@color/white"
         android:backgroundTint="@color/light_blue"
-        android:text="Rematch"
+        android:text="Replay"
         app:cornerRadius="5dp" />
 
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/xpLayout"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/player_details"
         android:layout_marginTop="40dp"
         android:layout_centerInParent="true"
@@ -47,9 +48,10 @@
                 android:id="@+id/winningXP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bubblegum_sans"
                 android:layout_centerInParent="true"
                 android:text="5 XP"
-                android:textColor="@color/light_blue" />
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 
@@ -110,7 +112,7 @@
                 android:layout_below="@+id/player_card"
                 android:layout_centerHorizontal="true"
                 android:text="Level 0"
-                android:textColor="@color/white_grey" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/player_name"
@@ -119,7 +121,7 @@
                 android:layout_below="@+id/player_level"
                 android:layout_centerHorizontal="true"
                 android:text="Starr"
-                android:textColor="@color/white_grey" />
+                android:textColor="@color/black" />
 
         </RelativeLayout>
         <!--        End of Player Details-->

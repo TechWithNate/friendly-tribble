@@ -1,6 +1,7 @@
 package com.nate.royalquest.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -55,6 +56,11 @@ public class CreateProfile extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private static final int PICK_IMAGE = 100;
     private String imageUriAccessToken;
+
+
+    private static final String PREFS_NAME = "UserPrefs"; // SharedPreferences file name
+    private static final String KEY_LEVEL = "userLevel";  // Key to store user level
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,8 +132,20 @@ public class CreateProfile extends AppCompatActivity {
         }
     }
 
+    private void saveUserLevel() {
+        // Initialize SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        // Save the selected level in SharedPreferences
+        editor.putString(KEY_LEVEL, level);
+        editor.apply(); // Save changes asynchronously
+    }
+
+
     private void createProfile(){
         progressBar.setVisibility(View.VISIBLE);
+        saveUserLevel();
         sendDataForNewUser();
         progressBar.setVisibility(View.GONE);
         startActivity(new Intent(CreateProfile.this, Home.class));
@@ -143,6 +161,7 @@ public class CreateProfile extends AppCompatActivity {
             userProfile.put("gender", gender);
             userProfile.put("level", level);
             userProfile.put("score", 10);
+            userProfile.put("playerLevel", 1);
 
             // Upload the image first
             sendImageToStorage(userProfile);

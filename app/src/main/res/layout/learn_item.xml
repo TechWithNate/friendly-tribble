@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:strokeColor="@color/white"
+    app:cardElevation="20dp"
+    android:layout_marginBottom="20dp"
+    app:cardBackgroundColor="@color/white_grey"
+    android:layout_height="100dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bubblegum_sans"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:id="@+id/learn_title"
+            android:text="Learn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bubblegum_sans"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/learn_date"
+            android:text="20-05-2020"/>
+
+    </RelativeLayout>
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
